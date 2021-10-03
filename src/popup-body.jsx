@@ -1,6 +1,6 @@
 import React from 'react'
 
-import classes from './PopupCardBody.module.css'
+import classes from './popup-body.module.css'
 
 const PopupCardBody = (props) => {
   return (
@@ -11,9 +11,13 @@ const PopupCardBody = (props) => {
           props.isClicked === 'clicked' ? classes.show : classes.hide
         }`}
       >
-        <div className={classes.closeBtn} onClick={() => props.onClick()}>
-          <span className='material-icons'>cancel</span>
-        </div>
+        {props.closeIcon ? (
+          <div dangerouslySetInnerHTML={{ __html: props.closeIcon }} />
+        ) : (
+          <div className={classes.closeBtn} onClick={() => props.onClick()}>
+            <span className='material-icons'>cancel</span>
+          </div>
+        )}
         <div className={classes.head}>
           <div className={`${classes.title}`}>
             <h5>{props.title}</h5>
@@ -31,7 +35,10 @@ const PopupCardBody = (props) => {
           </div>
         </div>
         <hr />
-        <div className={classes.body} dangerouslySetInnerHTML={{__html:props.description}} />
+        <div
+          className={classes.body}
+          dangerouslySetInnerHTML={{ __html: props.description }}
+        />
       </div>
     </div>
   )

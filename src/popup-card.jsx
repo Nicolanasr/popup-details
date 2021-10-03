@@ -1,10 +1,10 @@
 import React from 'react'
 
-import PopupCardBody from './PopupCardBody'
+import PopupCardBody from './popup-body'
 
 import classes from './popup-card.module.css'
 
-const PopupCard = () => {
+const PopupCard = (props) => {
   return (
     // if status of this card is 'disabled' add the disabled class
     <div
@@ -28,12 +28,7 @@ const PopupCard = () => {
           </div>
         </div>
         <div className={classes.advanceButton} onClick={() => props.onClick()}>
-          <span
-            className='material-icons'
-            style={{ backgroundColor: 'transparent', color: props.borderColor }}
-          >
-            arrow_circle_right
-          </span>
+            {/* // TODO to add arrow icon */}
         </div>
         <div
           className={classes.cardBorder}

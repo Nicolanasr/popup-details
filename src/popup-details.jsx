@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import PopupCard from './popup-card'
+
 const PopupDetails = (props) => {
   let initial = new Array(props.data.length).fill('initial')
   let disabled = new Array(props.data.length).fill('disabled')
@@ -18,7 +20,7 @@ const PopupDetails = (props) => {
     setisClicked({ ...tmpArr })
   }
   return (
-    <div>
+    <div style={{ position:'relative', width:'fit-content' }}>
       {props.data.map((item, index) => {
         return (
           <PopupCard
