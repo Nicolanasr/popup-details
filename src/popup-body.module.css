@@ -1,0 +1,86 @@
+.cardBody {
+	min-height: 400px;
+	width: 400px;
+	background-color: white;
+	margin-left: 1rem;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+	position: absolute;
+	z-index: 99;
+	transition: all 200ms;
+}
+
+.cardBody.hide {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 300ms ease-in-out;
+}
+
+.cardBody.show {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 300ms ease-in-out;
+}
+
+.moreInfo div {
+	display: flex;
+	align-items: center;
+}
+
+.moreInfo div span {
+	margin-right: 5px;
+}
+
+.cardBody.show .head {
+	padding: 2rem 1rem;
+	padding-bottom: 0;
+}
+
+.cardBody.show .body {
+	padding: 0 1rem;
+}
+
+.closeBtn {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.title h5 {
+	font-weight: 700;
+}
+
+.moreInfo {
+	display: flex;
+	flex: row;
+	margin-top: 0.2rem;
+	font-size: 14px;
+	color: rgb(187, 187, 187);
+}
+
+.moreInfo .type {
+	margin-left: 10px;
+}
+
+.body {
+	font-size: 14px;
+}
+
+.applyBtn {
+	margin: 2rem 1rem;
+}
+
+@media (max-width: 991.5px) {
+	.cardBodyWrapper {
+		left: 0;
+	}
+    .cardBody {
+        width: 100%;
+        margin: 0;
+    }
+	.cardBody.show {
+		width: 100%;
+		margin: 0;
+	}
+}
