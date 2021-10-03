@@ -1,6 +1,6 @@
 {
   "name": "popup-details",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "package that will let you have a nice popup box with details about the clicked card",
   "author": "NicolasNasr",
   "license": "MIT",
